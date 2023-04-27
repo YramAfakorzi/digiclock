@@ -48,7 +48,7 @@ function updateClock(){
     //let hr = h;
     if (h > 11){
        //h -=12;
-        ampm="Pm"
+        ampm="PM"
     }
     
     let formatValue = formatSwitchBtn.getAttribute("data-format");
