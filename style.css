@@ -1,0 +1,194 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body{
+    background: rgb(41, 41, 59);
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.digital-clock{
+box-shadow: 10px 10px 40px;
+width: 400px;
+padding: 20px 40px;
+align-items: center;
+justify-content: center;
+color:#645555;
+position:relative;
+display:flex;
+border-radius: 8px;
+flex-direction: column;
+}
+
+.time{
+   display:flex; 
+   align-items: center;
+   justify-content: center;
+}
+
+.hour, .dot, .minute{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    padding: 0 10px;
+    line-height: 125px;
+
+}
+
+.hour, .minute{
+    font-size: 100px;
+    width:125px;
+}
+
+.dot{
+    font-size: 60px;
+    color:rgb(116, 131, 143);
+}
+
+.hour{
+    background:-webkit-linear-gradient(90deg, rgba(14, 141, 107, 0.933), rgba(190, 255, 85, 0.267));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.minute{
+    background:-webkit-linear-gradient(90deg, rgba(84, 41, 118, 0.933), rgba(85, 198, 255, 0.267));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.rightPart{
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    flex-direction: column;
+}
+
+.ampm, .seconds{
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.ampm{
+    transform: translateY(-20px);
+    background:-webkit-linear-gradient(90deg, rgba(118, 41, 62, 0.933), rgba(85, 198, 255, 0.267));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.seconds{
+    transform: translateY(16px);
+    background:-webkit-linear-gradient(90deg, rgba(118, 41, 62, 0.933), rgba(85, 198, 255, 0.267));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.calender{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+    font-weight: 500;
+    font-size: 20px;
+    background:-webkit-linear-gradient(90deg, rgba(89, 104, 110, 0.933), rgba(255, 241, 85, 0.267));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.day, .day-number, .year{
+    margin-left: 7px;
+}
+
+.dot-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    cursor: pointer;
+    color:aliceblue;
+    font-size: 20px;
+}
+
+.dot-menu{
+    z-index: 999;
+    background: rgb(50, 50, 67);
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(26, 3, 3, 0.5);
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    padding: 10px 25px;
+    visibility: hidden ;
+    opacity: 1;
+    transition: 0.3s, ease;
+}
+
+.dot-menu.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.menu-list{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-format-text{
+    color:aliceblue;
+    font-size: 17px;
+    margin-right: 20px;
+}
+
+.format-switch-btn{
+    width:35px;
+    height: 15px;
+    background: rgb(27, 27, 53);
+    border-radius: 50px;
+    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+                inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+   cursor: pointer;   
+   display:flex;
+    align-items: center;
+    justify-content: center;          
+}
+
+.format-switch-btn:before{
+    content: " ";
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    background: rgba(186, 57, 91, 0.933);
+    border-radius: 75px;
+    box-shadow: 0 5px 25px rgba(186, 57, 91, 0.933);
+    transform: translateX(-10px);
+    transition: 0.3s ease;
+    transition-property: background, transform;
+}
+
+
+.format-switch-btn.active:before{
+    background: rgba(91, 174, 128, 0.933);
+    border-radius: 75px;
+    box-shadow: 0 5px 25px rgba(92, 195, 123, 0.933);
+    transform: translateX(10px);
+}
+
